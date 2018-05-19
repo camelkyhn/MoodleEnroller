@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBMethods.cs" />
+    <Compile Include="MoodleEnrollments.cs" />
     <Compile Include="MoodleUsers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
