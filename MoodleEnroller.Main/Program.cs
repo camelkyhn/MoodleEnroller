@@ -12,9 +12,13 @@ namespace MoodleEnroller.Main
     {
         static void Main(string[] args)
         {
+            string token = ConfigurationManager.AppSettings["Token"].ToString(); //Check App.config file for Moodle's Admin token
+
             MoodleUserRepository repository = new MoodleUserRepository();
 
-            repository.CoreUserCreateUsers(ConfigurationManager.AppSettings["Token"].ToString()); //Check App.config file for Moodle's Admin token
+            repository.CoreUserCreateUsers(token);
+
+            repository.EnrolManualEnrolUsers(token);
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace MoodleEnroller.DAL.Database
+namespace MoodleEnroller.DAL
 {
     public class MoodleUsers
     {
@@ -18,6 +18,8 @@ namespace MoodleEnroller.DAL.Database
             var connection = DBMethods.GetConnection();
             var command = DBMethods.GetCommand(connection, "Users");
             int i = 0; // Row index for DataReader
+
+            connection.Open();
 
             try
             {
